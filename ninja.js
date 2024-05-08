@@ -18,7 +18,22 @@ class Ninja{
         this.salud+=10;
     }
 }
-const ninja1 = new Ninja("Hyabusa");
-ninja1.sayName();
-ninja1.showStats();
-
+class Sensei extends Ninja{
+    constructor(nombre){
+        super(nombre, 200, 10, 10);
+        this.sabiduria =10;
+    }
+    speakWisdom(){
+        super.drinkSake();
+        console.log("algo sabiondo...");
+    }
+    drinkSake(){
+        super.drinkSake();
+        console.log("another wisdom thing...")
+    }
+}
+const sensei1 = new Sensei("Maestro Splinter");
+sensei1.sayName();
+sensei1.showStats();
+sensei1.speakWisdom();
+sensei1.showStats();
